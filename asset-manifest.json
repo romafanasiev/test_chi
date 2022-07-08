@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/test_chi/static/css/main.1af370eb.css",
+    "main.js": "/test_chi/static/js/main.4427625b.js",
+    "index.html": "/test_chi/index.html",
+    "static/media/cross.svg": "/test_chi/static/media/cross.1239197ee4a75d96c27b.svg",
+    "main.1af370eb.css.map": "/test_chi/static/css/main.1af370eb.css.map",
+    "main.4427625b.js.map": "/test_chi/static/js/main.4427625b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1af370eb.css",
+    "static/js/main.4427625b.js"
+  ]
+}
