@@ -1,0 +1,58 @@
+@import "../../styles/utils/vars";
+@import "../../styles/utils/mixins";
+
+.LoanItem {
+  position: relative;
+  border: 1px solid $borderColor;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: $maxWidth;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  @include onTablet {
+    flex-direction: row;
+    padding: 32px;
+  }
+  &__description {
+    max-width: 100%;
+    @include onTablet {
+      max-width: 50%;
+    }
+  }
+  &__list {
+    list-style: none;
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 16px;
+    @include onTablet {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    @include onDesktop {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+  &__item {
+    margin-top: 10px;
+  }
+  &__category {
+    font-weight: 600;
+  }
+  &__status {
+    position: absolute;
+    top: 150px;
+    right: 10px;
+    color: $greenColor;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    @include onTablet {
+      top: 13px;
+      right: 32px;
+    }
+  }
+}

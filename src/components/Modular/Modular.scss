@@ -1,0 +1,140 @@
+@import "../../styles/utils/vars";
+@import "../../styles/utils/mixins";
+
+.Modular {
+  z-index: -100;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(26, 26, 26, 0.8);
+  color: $blackColor;
+  &--active {
+    z-index: 100;
+  }
+  &__content {
+    background-color: $whiteColor;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    max-width: 280px;
+    @include onTablet {
+      max-width: 627px;
+      padding: 64px;
+    }
+  }
+  &__title {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 34px;
+    @include onTablet {
+      font-size: 30px;
+      line-height: 38px;
+    }
+    @include onDesktop {
+      font-size: 35px;
+      line-height: 42px;
+    }
+  }
+  &__text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    @include onTablet {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    @include onDesktop {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    &--section {
+      margin-top: 32px;
+    }
+  }
+  &__label {
+    display: block;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+    margin-top: 64px;
+    @include onTablet {
+      font-size: 26px;
+      line-height: 32px;
+    }
+    @include onDesktop {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+  &__actions {
+    margin-top: 29px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    @include onTablet {
+      flex-direction: row;
+      gap: 0;
+    }
+  }
+  &__input {
+    display: flex;
+    align-items: flex-end;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: end;
+    height: 56px;
+    background-color: $whiteColor;
+    border: 1px solid rgba(48, 50, 71, 0.1);
+    border-radius: 5px;
+    outline: none;
+    flex-grow: 1;
+    margin-right: 0;
+    padding-right: 32px;
+    max-width: 230px;
+    @include onTablet {
+      margin-right: 32px;
+      max-width: 100%;
+    }
+    &:hover,
+    &:active {
+      border-color: $blackColor;
+    }
+  }
+  &__button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    background: url(../../images/cross.svg);
+    height: 16px;
+    width: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    @include onTablet {
+      top: 40px;
+      right: 40px;
+    }
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}

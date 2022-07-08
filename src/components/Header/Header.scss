@@ -1,0 +1,16 @@
+@import "../../styles/utils/vars";
+
+.Header {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  border-bottom: 1px solid $borderColor;
+  &__link {
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 24px;
+    &:hover {
+      color: $greenColor;
+    }
+  }
+}

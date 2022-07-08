@@ -1,0 +1,32 @@
+@import "../../styles/utils/vars";
+@import "../../styles/utils/mixins";
+
+.HomePage {
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    margin-top: 32px;
+  }
+  &__total-amount {
+    max-width: $maxWidth;
+    padding-top: 60px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+    @include onTablet {
+      justify-content: space-between;
+      font-size: 16px;
+      line-height: 20px;
+      margin-left: 27px;
+    }
+    @include onDesktop {
+      font-size: 20px;
+      line-height: 24px;
+      margin-left: 64px;
+    }
+  }
+}
